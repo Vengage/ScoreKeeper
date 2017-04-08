@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="reset">Reset</string>
+    <string name="game">Game</string>
+    <string name="safety">+2 Safety</string>
+    <string name="field_goal">+3 Field Goal</string>
+    <string name="conversion">+2 Conversion</string>
+    <string name="extra_point">+1 Extra Point</string>
+    <string name="touchdown">+6 Touchdown</string>
+    <string name="zero">0</string>
+    <string name="out">+1 Out</string>
+    <string name="team_b">Team B</string>
+    <string name="team_a">Team A</string>
+    <string name="goal">+1 Goal</string>
+    <string name="foul">+1 Foul</string>
+    <string name="_2_points">+2 Points</string>
+    <string name="_3_points">+3 Points</string>
+    <string name="free_throw">Free throw</string>
+    <string name="basketball">Basketball</string>
+    <string name="baseball_score">Baseball Score</string>
+    <string name="american_football_score">American Football Score</string>
+    <string name="choose_the_game">Choose the game that you want to track the score:</string>
+    <string name="basketball_score">Basketball Score</string>
+    <string name="football_score">Football Score</string>
+    <string name="football">Football</string>
+    <string name="baseball">Baseball</string>
+    <string name="run">+1 Run</string>
+    <string name="american_football">American Football</string>
+</resources>
