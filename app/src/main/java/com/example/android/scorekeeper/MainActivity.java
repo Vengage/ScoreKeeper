@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This is function is called when a game type is selected
      *
-     * @param view
+     * @param view The button pressed to select a game
      */
     public void onButtonClicked(View view) {
 
@@ -102,6 +102,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This function is called when the basketball score button is presed
+     */
     public void chooseBasketball() {
         // We show the gameChanger and we hide the rest of the games
         gameChangerLinearLayout.setVisibility(View.GONE);
@@ -110,6 +113,9 @@ public class MainActivity extends AppCompatActivity {
         basketballRelativeLayout.setVisibility(View.VISIBLE);
     }
 
+    /**
+     * This function is called when the football score button is pressed
+     */
     public void chooseFootball() {
         // We show the gameChanger and we hide the rest of the games
         gameChangerLinearLayout.setVisibility(View.GONE);
@@ -118,6 +124,9 @@ public class MainActivity extends AppCompatActivity {
         footballRelativeLayout.setVisibility(View.VISIBLE);
     }
 
+    /**
+     * This function called when the american football score button is pressed
+     */
     public void chooseAmericanFootball() {
         // We show the gameChanger and we hide the rest of the games
         gameChangerLinearLayout.setVisibility(View.GONE);
@@ -126,6 +135,9 @@ public class MainActivity extends AppCompatActivity {
         americanFootballRelativeLayout.setVisibility(View.VISIBLE);
     }
 
+    /**
+     * This function is called when the baseball score button is pressed
+     */
     public void chooseBaseball() {
         // We show the gameChanger and we hide the rest of the games
         gameChangerLinearLayout.setVisibility(View.GONE);
@@ -279,7 +291,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add a goal to Team A
      *
-     * @param view
+     * @param view The button to increment the score for Team A
      */
     public void addGoalTeamA(View view) {
         goalsTeamA += 1;
@@ -289,7 +301,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add a goal to Team B
      *
-     * @param view
+     * @param view The button to increment the score for Team B
      */
     public void addGoalTeamB(View view) {
         goalsTeamB += 1;
@@ -299,7 +311,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Display the number of fouls for Team A
      *
-     * @param foulsCount
+     * @param foulsCount The number of fouls for the Team
      */
     public void displayFoulsTeamA(int foulsCount) {
         TextView foulsTeamA = (TextView) findViewById(R.id.foul_a_football);
@@ -309,7 +321,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add a foul to Team A
      *
-     * @param view
+     * @param view The button to increment the fouls count for Team A
      */
     public void addFoulTeamA(View view) {
         foulsTeamA += 1;
@@ -319,7 +331,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Display the number of fouls for Team B
      *
-     * @param foulsCount
+     * @param foulsCount The number of fouls for the Team
      */
     public void displayFoulsTeamB(int foulsCount) {
         TextView foulsTeamB = (TextView) findViewById(R.id.foul_b_football);
@@ -329,7 +341,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add a foul to Team B
      *
-     * @param view
+     * @param view The button to increment the fouls count for Team B
      */
     public void addFoulTeamB(View view) {
         foulsTeamB += 1;
@@ -341,7 +353,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Display the number of points for Team A
      *
-     * @param points
+     * @param points The number of points of the team
      */
     public void displayScoreAmericanFootballTeamA(int points) {
         TextView pointsTeamA = (TextView) findViewById(R.id.team_a_score_american_football);
@@ -351,7 +363,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add 6 points to Team A score
      *
-     * @param view
+     * @param view The button to increment the score for Team A with 6 points
      */
     public void addTouchdownTeamA(View view) {
         pointsTeamA += 6;
@@ -361,7 +373,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add 1 points to Team A score
      *
-     * @param view
+     * @param view The button to increment the score for Team A with 1 point
      */
     public void addExtraPointTeamA(View view) {
         pointsTeamA += 1;
@@ -371,7 +383,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add 2 points to Team A score
      *
-     * @param view
+     * @param view The button to increment the score for Team A with 2 points for conversion
      */
     public void addConversionTeamA(View view) {
         pointsTeamA += 2;
@@ -381,7 +393,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add 3 points to Team A score
      *
-     * @param view
+     * @param view The button to increment the score for Team A with 3 points
      */
     public void addFieldGoalTeamA(View view) {
         pointsTeamA += 3;
@@ -391,7 +403,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add 2 points to Team A score
      *
-     * @param view
+     * @param view The button to increment the score for Team A with 2 points for safety
      */
     public void addSafetyTeamA(View view) {
         pointsTeamA += 2;
@@ -401,7 +413,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Display the number of points for Team B
      *
-     * @param points
+     * @param points The number of points of the team
      */
     public void displayScoreAmericanFootballTeamB(int points) {
         TextView pointsTeamB = (TextView) findViewById(R.id.team_b_score_american_football);
@@ -411,7 +423,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add 6 points to Team B score
      *
-     * @param view
+     * @param view The button to increment the score for Team B with 6 points
      */
     public void addTouchdownTeamB(View view) {
         pointsTeamB += 6;
@@ -421,7 +433,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add 1 points to Team B score
      *
-     * @param view
+     * @param view The button to increment the score for Team B with 1 points
      */
     public void addExtraPointTeamB(View view) {
         pointsTeamB += 1;
@@ -431,7 +443,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add 2 points to Team B score
      *
-     * @param view
+     * @param view The button to increment the score for Team B with 2 points for conversion
      */
     public void addConversionTeamB(View view) {
         pointsTeamB += 2;
@@ -441,7 +453,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add 3 points to Team B score
      *
-     * @param view
+     * @param view The button to increment the score for Team B with 3 points
      */
     public void addFieldGoalTeamB(View view) {
         pointsTeamB += 3;
@@ -451,7 +463,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add 2 points to Team B score
      *
-     * @param view
+     * @param view The button to increment the score for Team B with 2 points for safety
      */
     public void addSafetyTeamB(View view) {
         pointsTeamB += 2;
@@ -464,7 +476,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Display the number of runs for Team A
      *
-     * @param runsNumber
+     * @param runsNumber The number of runs for the Team
      */
     public void displayRunsTeamA(int runsNumber) {
         TextView runsForTeamA = (TextView) findViewById(R.id.team_a_score_baseball);
@@ -474,7 +486,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Display the number of runs for Team B
      *
-     * @param runsNumber
+     * @param runsNumber The number of runs for the Team
      */
     public void displayRunsTeamB(int runsNumber) {
         TextView runsForTeamB = (TextView) findViewById(R.id.team_b_score_baseball);
@@ -484,7 +496,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add one run for Team A
      *
-     * @param view
+     * @param view The button to increment the runs for Team A
      */
     public void addRunTeamA(View view) {
         runsTeamA += 1;
@@ -494,7 +506,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add one run for Team B
      *
-     * @param view
+     * @param view The button to increment the runs for Team B
      */
     public void addRunTeamB(View view) {
         runsTeamB += 1;
@@ -504,7 +516,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Display the number of outs for Team A
      *
-     * @param outsNumber
+     * @param outsNumber The number of outs for the team
      */
     public void displayOutsTeamA(int outsNumber) {
         TextView outsForTeamA = (TextView) findViewById(R.id.out_a_baseball);
@@ -514,7 +526,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Display the number of outs for Team B
      *
-     * @param outsNumber
+     * @param outsNumber The number of outs for the team
      */
     public void displayOutsTeamB(int outsNumber) {
         TextView outsForTeamB = (TextView) findViewById(R.id.out_b_baseball);
@@ -524,14 +536,18 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add one out for Team A
      *
-     * @param view
+     * @param view The button to increment the outs for Team A
      */
     public void addOutTeamA(View view) {
         outsTeamA += 1;
         displayOutsTeamA(outsTeamA);
     }
 
-    // Add one out for Team B
+    /**
+     * Add one out for Team B
+     *
+     * @param view The button to increment the outs for Team A
+     */
     public void addOutTeamB(View view) {
         outsTeamB += 1;
         displayOutsTeamB(outsTeamB);

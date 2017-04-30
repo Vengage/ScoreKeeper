@@ -17,11 +17,11 @@
     <string name="_3_points">+3 Points</string>
     <string name="free_throw">Free throw</string>
     <string name="basketball">Basketball</string>
-    <string name="baseball_score">Baseball Score</string>
-    <string name="american_football_score">American Football Score</string>
-    <string name="choose_the_game">Choose the game that you want to track the score:</string>
-    <string name="basketball_score">Basketball Score</string>
-    <string name="football_score">Football Score</string>
+    <string name="baseball_score">Baseball</string>
+    <string name="american_football_score">American Football</string>
+    <string name="choose_the_game">Choose a game:</string>
+    <string name="basketball_score">Basketball</string>
+    <string name="football_score">Football</string>
     <string name="football">Football</string>
     <string name="baseball">Baseball</string>
     <string name="run">+1 Run</string>
