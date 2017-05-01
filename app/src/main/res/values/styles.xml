@@ -5,8 +5,12 @@
         <!-- Customize your theme here. -->
         <!-- Primary theme color of the app (sets background color of app bar) -->
         <item name="colorPrimary">#673AB7</item>
+        <item name="colorPrimaryDark">#512DA8</item>
+        <item name="colorAccent">#536DFE</item>
         <!-- Background color of buttons in the app -->
-        <item name="colorButtonNormal">#D1C4E9</item>
+        <item name="colorButtonNormal">@color/colorPrimaryDark</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorIcons</item>
     </style>
 
     <!-- GameChanger button style theme. -->
@@ -14,10 +18,48 @@
         <item name="android:paddingBottom">@dimen/padding_margin_16dp</item>
         <item name="android:paddingTop">@dimen/padding_margin_16dp</item>
         <item name="android:paddingLeft">@dimen/padding_margin_16dp</item>
-        <item name="android:fontFamily">Roboto</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorIcons</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+    </style>
+
+    <!-- Game Type Title TextView Style theme. -->
+    <style name="GameTypeTitle">
+        <item name="android:paddingBottom">@dimen/padding_margin_16dp</item>
+        <item name="android:drawablePadding">@dimen/padding_margin_16dp</item>
+        <item name="android:paddingTop">@dimen/padding_margin_16dp</item>
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <!-- Team Score -->
+    <style name="TeamScore">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:paddingBottom">@dimen/padding_margin_24dp</item>
+        <item name="android:paddingTop">@dimen/padding_margin_16dp</item>
+        <item name="android:text">@string/zero</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/team_score_56sp</item>
+    </style>
+
+    <!-- Score Title -->
+    <style name="ScoreTitle">
+        <item name="android:padding">@dimen/padding_margin_4dp</item>
+        <item name="android:textColor">@color/colorScoreTitle</item>
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Game Button -->
+    <style name="GameButton">
+        <item name="android:layout_marginBottom">@dimen/padding_margin_32dp</item>
+        <item name="android:layout_marginRight">@dimen/padding_margin_24dp</item>
+        <item name="android:text">@string/game</item>
+    </style>
+
+    <!-- Reset Button -->
+    <style name="ResetButton">
+        <item name="android:layout_marginBottom">@dimen/padding_margin_32dp</item>
+        <item name="android:text">@string/reset</item>
     </style>
 </resources>

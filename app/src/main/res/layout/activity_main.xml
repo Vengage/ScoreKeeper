@@ -11,13 +11,11 @@
         android:id="@+id/game_changer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:padding="@dimen/padding_margin_16dp"
-        android:visibility="visible"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/basketball_score"
-        android:layout_toEndOf="@+id/basketball_score">
+        android:visibility="visible">
 
         <TextView
             android:layout_width="match_parent"
@@ -38,7 +36,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:drawableLeft="@mipmap/basketball"
+            android:drawableLeft="@mipmap/basketball_white"
+            android:drawableStart="@mipmap/basketball_white"
             android:onClick="onButtonClicked"
             android:paddingEnd="@dimen/padding_margin_16dp"
             android:paddingStart="@dimen/padding_margin_16dp"
@@ -51,7 +50,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:drawableLeft="@mipmap/football"
+            android:drawableLeft="@mipmap/football_white"
+            android:drawableStart="@mipmap/football_white"
             android:onClick="onButtonClicked"
             android:paddingEnd="@dimen/padding_margin_16dp"
             android:paddingStart="@dimen/padding_margin_16dp"
@@ -63,7 +63,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:drawableLeft="@mipmap/american_football"
+            android:drawableLeft="@mipmap/american_football_white"
+            android:drawableStart="@mipmap/american_football_white"
             android:onClick="onButtonClicked"
             android:paddingEnd="@dimen/padding_margin_16dp"
             android:paddingStart="@dimen/padding_margin_16dp"
@@ -75,7 +76,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:drawableLeft="@mipmap/baseball"
+            android:drawableLeft="@mipmap/baseball_white"
+            android:drawableStart="@mipmap/baseball_white"
             android:onClick="onButtonClicked"
             android:paddingEnd="@dimen/padding_margin_16dp"
             android:paddingStart="@dimen/padding_margin_16dp"
@@ -92,14 +94,15 @@
 
         <TextView
             android:id="@+id/game_type_basketball"
-            android:layout_width="match_parent"
+            style="@style/GameTypeTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:paddingBottom="@dimen/padding_margin_16dp"
-            android:paddingTop="@dimen/padding_margin_16dp"
-            android:text="@string/basketball"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"/>
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@mipmap/basketball"
+            android:drawableStart="@mipmap/basketball"
+            android:gravity="center"
+            android:text="@string/basketball"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -116,33 +119,27 @@
                 android:paddingRight="@dimen/padding_margin_24dp">
 
                 <TextView
+                    style="@style/ScoreTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center_horizontal"
-                    android:padding="4dp"
-                    android:text="@string/team_a"
-                    android:textColor="#616161"
-                    android:textSize="@dimen/text_size_14sp"/>
+                    android:text="@string/team_a"/>
 
                 <TextView
                     android:id="@+id/team_a_score_basketball"
+                    style="@style/TeamScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
-                    android:paddingBottom="@dimen/padding_margin_24dp"
-                    android:paddingTop="@dimen/padding_margin_16dp"
-                    android:text="@string/zero"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/team_score_56sp"/>
+                    android:gravity="center_horizontal"/>
 
                 <Button
                     android:id="@+id/three_points_a_basketball"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="addThreePointsForTeamA"
-                    android:text="@string/_3_points"/>
+                    android:text="@string/_3_points"
+                    />
 
                 <Button
                     android:id="@+id/two_points_a_basketball"
@@ -175,26 +172,18 @@
                 android:paddingRight="@dimen/padding_margin_24dp">
 
                 <TextView
+                    style="@style/ScoreTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
                     android:gravity="center_horizontal"
-                    android:padding="4dp"
-                    android:text="@string/team_b"
-                    android:textColor="#616161"
-                    android:textSize="@dimen/text_size_14sp"/>
+                    android:text="@string/team_b"/>
 
                 <TextView
                     android:id="@+id/team_b_score_basketball"
+                    style="@style/TeamScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
-                    android:paddingBottom="@dimen/padding_margin_24dp"
-                    android:paddingTop="@dimen/padding_margin_16dp"
-                    android:text="@string/zero"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/team_score_56sp"/>
+                    android:gravity="center_horizontal"/>
 
                 <Button
                     android:id="@+id/three_points_b_basketball"
@@ -224,25 +213,21 @@
 
         <Button
             android:id="@+id/reset_basketball"
+            style="@style/ResetButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="@dimen/padding_margin_32dp"
-            android:onClick="resetScore"
-            android:text="@string/reset"/>
+            android:onClick="resetScore"/>
 
         <Button
+            style="@style/GameButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="@dimen/padding_margin_32dp"
-            android:layout_marginEnd="@dimen/padding_margin_24dp"
-            android:layout_marginRight="@dimen/padding_margin_24dp"
-            android:onClick="changeGame"
-            android:text="@string/game"/>
+            android:onClick="changeGame"/>
     </RelativeLayout>
 
     <!-- Football -->
@@ -254,14 +239,15 @@
 
         <TextView
             android:id="@+id/game_type_football"
-            android:layout_width="match_parent"
+            style="@style/GameTypeTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:paddingBottom="@dimen/padding_margin_16dp"
-            android:paddingTop="@dimen/padding_margin_16dp"
-            android:text="@string/football"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"/>
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@mipmap/football"
+            android:drawableStart="@mipmap/football"
+            android:gravity="center"
+            android:text="@string/football"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -278,26 +264,18 @@
                 android:paddingRight="@dimen/padding_margin_24dp">
 
                 <TextView
+                    style="@style/ScoreTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
                     android:gravity="center_horizontal"
-                    android:padding="4dp"
-                    android:text="@string/team_a"
-                    android:textColor="#616161"
-                    android:textSize="@dimen/text_size_14sp"/>
+                    android:text="@string/team_a"/>
 
                 <TextView
                     android:id="@+id/team_a_score_football"
+                    style="@style/TeamScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
-                    android:paddingBottom="@dimen/padding_margin_24dp"
-                    android:paddingTop="@dimen/padding_margin_16dp"
-                    android:text="@string/zero"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/team_score_56sp"/>
+                    android:gravity="center_horizontal"/>
 
                 <Button
                     android:id="@+id/goal_a_football"
@@ -309,15 +287,10 @@
 
                 <TextView
                     android:id="@+id/foul_a_football"
+                    style="@style/TeamScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
-                    android:paddingBottom="@dimen/padding_margin_24dp"
-                    android:paddingTop="@dimen/padding_margin_16dp"
-                    android:text="@string/zero"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/team_score_56sp"/>
+                    android:gravity="center_horizontal"/>
 
                 <Button
                     android:id="@+id/add_foul_a_football"
@@ -342,26 +315,18 @@
                 android:paddingRight="@dimen/padding_margin_24dp">
 
                 <TextView
+                    style="@style/ScoreTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
                     android:gravity="center_horizontal"
-                    android:padding="4dp"
-                    android:text="@string/team_b"
-                    android:textColor="#616161"
-                    android:textSize="@dimen/text_size_14sp"/>
+                    android:text="@string/team_b"/>
 
                 <TextView
                     android:id="@+id/team_b_score_football"
+                    style="@style/TeamScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
-                    android:paddingBottom="@dimen/padding_margin_24dp"
-                    android:paddingTop="@dimen/padding_margin_16dp"
-                    android:text="@string/zero"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/team_score_56sp"/>
+                    android:gravity="center_horizontal"/>
 
                 <Button
                     android:id="@+id/goal_b_football"
@@ -373,15 +338,10 @@
 
                 <TextView
                     android:id="@+id/foul_b_football"
+                    style="@style/TeamScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
-                    android:paddingBottom="@dimen/padding_margin_24dp"
-                    android:paddingTop="@dimen/padding_margin_16dp"
-                    android:text="@string/zero"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/team_score_56sp"/>
+                    android:gravity="center_horizontal"/>
 
                 <Button
                     android:id="@+id/add_foul_b_football"
@@ -396,25 +356,21 @@
 
         <Button
             android:id="@+id/reset_football"
+            style="@style/ResetButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="@dimen/padding_margin_32dp"
-            android:onClick="resetScore"
-            android:text="@string/reset"/>
+            android:onClick="resetScore"/>
 
         <Button
+            style="@style/GameButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="@dimen/padding_margin_32dp"
-            android:layout_marginEnd="@dimen/padding_margin_24dp"
-            android:layout_marginRight="@dimen/padding_margin_24dp"
-            android:onClick="changeGame"
-            android:text="@string/game"/>
+            android:onClick="changeGame"/>
     </RelativeLayout>
 
     <!-- Baseball -->
@@ -426,14 +382,15 @@
 
         <TextView
             android:id="@+id/game_type_baseball"
-            android:layout_width="match_parent"
+            style="@style/GameTypeTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:paddingBottom="@dimen/padding_margin_16dp"
-            android:paddingTop="@dimen/padding_margin_16dp"
-            android:text="@string/baseball"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"/>
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@mipmap/baseball"
+            android:drawableStart="@mipmap/baseball"
+            android:gravity="center"
+            android:text="@string/baseball"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -450,26 +407,18 @@
                 android:paddingRight="@dimen/padding_margin_24dp">
 
                 <TextView
+                    style="@style/ScoreTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
                     android:gravity="center_horizontal"
-                    android:padding="4dp"
-                    android:text="@string/team_a"
-                    android:textColor="#616161"
-                    android:textSize="@dimen/text_size_14sp"/>
+                    android:text="@string/team_a"/>
 
                 <TextView
                     android:id="@+id/team_a_score_baseball"
+                    style="@style/TeamScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
-                    android:paddingBottom="@dimen/padding_margin_24dp"
-                    android:paddingTop="@dimen/padding_margin_16dp"
-                    android:text="@string/zero"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/team_score_56sp"/>
+                    android:gravity="center_horizontal"/>
 
                 <Button
                     android:id="@+id/run_a_baseball"
@@ -481,15 +430,10 @@
 
                 <TextView
                     android:id="@+id/out_a_baseball"
+                    style="@style/TeamScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
-                    android:paddingBottom="@dimen/padding_margin_24dp"
-                    android:paddingTop="@dimen/padding_margin_16dp"
-                    android:text="@string/zero"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/team_score_56sp"/>
+                    android:gravity="center_horizontal"/>
 
                 <Button
                     android:id="@+id/add_out_a_baseball"
@@ -514,26 +458,18 @@
                 android:paddingRight="@dimen/padding_margin_24dp">
 
                 <TextView
+                    style="@style/ScoreTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
                     android:gravity="center_horizontal"
-                    android:padding="4dp"
-                    android:text="@string/team_b"
-                    android:textColor="#616161"
-                    android:textSize="@dimen/text_size_14sp"/>
+                    android:text="@string/team_b"/>
 
                 <TextView
                     android:id="@+id/team_b_score_baseball"
+                    style="@style/TeamScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
-                    android:paddingBottom="@dimen/padding_margin_24dp"
-                    android:paddingTop="@dimen/padding_margin_16dp"
-                    android:text="@string/zero"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/team_score_56sp"/>
+                    android:gravity="center_horizontal"/>
 
                 <Button
                     android:id="@+id/run_b_baseball"
@@ -545,15 +481,10 @@
 
                 <TextView
                     android:id="@+id/out_b_baseball"
+                    style="@style/TeamScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
-                    android:paddingBottom="@dimen/padding_margin_24dp"
-                    android:paddingTop="@dimen/padding_margin_16dp"
-                    android:text="@string/zero"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/team_score_56sp"/>
+                    android:gravity="center_horizontal"/>
 
                 <Button
                     android:id="@+id/add_out_b_baseball"
@@ -568,25 +499,21 @@
 
         <Button
             android:id="@+id/reset_baseball"
+            style="@style/ResetButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="@dimen/padding_margin_32dp"
-            android:onClick="resetScore"
-            android:text="@string/reset"/>
+            android:onClick="resetScore"/>
 
         <Button
+            style="@style/GameButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="@dimen/padding_margin_32dp"
-            android:layout_marginEnd="@dimen/padding_margin_24dp"
-            android:layout_marginRight="@dimen/padding_margin_24dp"
-            android:onClick="changeGame"
-            android:text="@string/game"/>
+            android:onClick="changeGame"/>
     </RelativeLayout>
 
     <!-- American Football -->
@@ -598,14 +525,15 @@
 
         <TextView
             android:id="@+id/game_type_american_football"
-            android:layout_width="match_parent"
+            style="@style/GameTypeTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:paddingBottom="@dimen/padding_margin_16dp"
-            android:paddingTop="@dimen/padding_margin_16dp"
-            android:text="@string/american_football"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"/>
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@mipmap/american_football"
+            android:drawableStart="@mipmap/american_football"
+            android:gravity="center"
+            android:text="@string/american_football"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -622,26 +550,18 @@
                 android:paddingRight="@dimen/padding_margin_24dp">
 
                 <TextView
+                    style="@style/ScoreTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
                     android:gravity="center_horizontal"
-                    android:padding="4dp"
-                    android:text="@string/team_a"
-                    android:textColor="#616161"
-                    android:textSize="@dimen/text_size_14sp"/>
+                    android:text="@string/team_a"/>
 
                 <TextView
                     android:id="@+id/team_a_score_american_football"
+                    style="@style/TeamScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
-                    android:paddingBottom="@dimen/padding_margin_24dp"
-                    android:paddingTop="@dimen/padding_margin_16dp"
-                    android:text="@string/zero"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/team_score_56sp"/>
+                    android:gravity="center_horizontal"/>
 
                 <Button
                     android:id="@+id/touchdown_a_american_football"
@@ -695,26 +615,18 @@
                 android:paddingRight="@dimen/padding_margin_24dp">
 
                 <TextView
+                    style="@style/ScoreTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
                     android:gravity="center_horizontal"
-                    android:padding="4dp"
-                    android:text="@string/team_b"
-                    android:textColor="#616161"
-                    android:textSize="@dimen/text_size_14sp"/>
+                    android:text="@string/team_b"/>
 
                 <TextView
                     android:id="@+id/team_b_score_american_football"
+                    style="@style/TeamScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center_horizontal"
-                    android:paddingBottom="@dimen/padding_margin_24dp"
-                    android:paddingTop="@dimen/padding_margin_16dp"
-                    android:text="@string/zero"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/team_score_56sp"/>
+                    android:gravity="center_horizontal"/>
 
                 <Button
                     android:id="@+id/touchdown_b_american_football"
@@ -756,25 +668,21 @@
 
         <Button
             android:id="@+id/reset_american_football"
+            style="@style/ResetButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="@dimen/padding_margin_32dp"
-            android:onClick="resetScore"
-            android:text="@string/reset"/>
+            android:onClick="resetScore"/>
 
         <Button
+            style="@style/GameButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="@dimen/padding_margin_32dp"
-            android:layout_marginEnd="@dimen/padding_margin_24dp"
-            android:layout_marginRight="@dimen/padding_margin_24dp"
-            android:onClick="changeGame"
-            android:text="@string/game"/>
+            android:onClick="changeGame"/>
     </RelativeLayout>
 
 
