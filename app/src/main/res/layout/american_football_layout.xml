@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/american_football_score"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <!-- American Football -->
+
+    <TextView
+        android:id="@+id/game_type_american_football"
+        style="@style/GameTypeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@mipmap/american_football"
+        android:drawableStart="@mipmap/american_football"
+        android:gravity="center"
+        android:text="@string/american_football"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/game_type_american_football"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_margin_24dp"
+            android:paddingRight="@dimen/padding_margin_24dp">
+
+            <TextView
+                style="@style/ScoreTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/team_a"/>
+
+            <TextView
+                android:id="@+id/team_a_score_american_football"
+                style="@style/TeamScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/touchdown_a_american_football"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addTouchdownTeamA"
+                android:text="@string/touchdown"/>
+
+            <Button
+                android:id="@+id/extra_point_a_american_football"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addExtraPointTeamA"
+                android:text="@string/extra_point"/>
+
+            <Button
+                android:id="@+id/conversion_a_american_football"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addConversionTeamA"
+                android:text="@string/conversion"/>
+
+            <Button
+                android:id="@+id/field_goal_a_american_football"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addFieldGoalTeamA"
+                android:text="@string/field_goal"/>
+
+            <Button
+                android:id="@+id/safety_a_american_football"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addSafetyTeamA"
+                android:text="@string/safety"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_margin_24dp"
+            android:paddingRight="@dimen/padding_margin_24dp">
+
+            <TextView
+                style="@style/ScoreTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/team_b"/>
+
+            <TextView
+                android:id="@+id/team_b_score_american_football"
+                style="@style/TeamScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/touchdown_b_american_football"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addTouchdownTeamB"
+                android:text="@string/touchdown"/>
+
+            <Button
+                android:id="@+id/extra_point_b_american_football"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addExtraPointTeamB"
+                android:text="@string/extra_point"/>
+
+            <Button
+                android:id="@+id/conversion_b_american_football"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addConversionTeamB"
+                android:text="@string/conversion"/>
+
+            <Button
+                android:id="@+id/field_goal_b_american_football"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addFieldGoalTeamB"
+                android:text="@string/field_goal"/>
+
+            <Button
+                android:id="@+id/safety_b_american_football"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addSafetyTeamB"
+                android:text="@string/safety"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reset_american_football"
+        style="@style/ResetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:onClick="resetScore"/>
+
+    <Button
+        style="@style/GameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:onClick="changeGame"/>
+</RelativeLayout>
